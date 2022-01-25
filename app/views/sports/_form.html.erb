@@ -1,0 +1,38 @@
+<%= form_with(model: sport, local: true) do |form| %>
+  <% if sport.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sport.errors.count, "error") %> prohibited this sport from being saved:</h2>
+
+      <ul>
+      <% sport.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field" class="form-group">
+    <%= form.text_field :sport_name ,class:"form-control" , placeholder:"sport name"%>
+  </div>
+  <br/>
+
+  <div class="field" class="form-group">
+    <%= form.text_field :sport_equipement ,class:"form-control" ,placeholder:"sport equipement"  %>
+  </div>
+  <br/>
+
+  <div class="field" class="form-group">
+    <%= form.number_field :player_count ,class:"form-control", placeholder:"player count"%>
+  </div>
+  
+
+  <div class="field" class="form-group">
+    <%= form.number_field :user_id ,id: :sport_user_id,class:"form-control" , value:current_user.id , type: :hidden %>
+  </div>
+  <br/>
+
+  <div class="actions">
+    <%= form.submit class:"btn btn-secondary"%>
+  </div>
+  <br/>
+<% end %>

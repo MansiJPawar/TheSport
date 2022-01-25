@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<div class="jumbotron">
+  <h1 class="display-4">  <%= @sport.sport_name %></h1>
+  <p class="lead"> <strong>Sport equipement:</strong> : <%= @sport.sport_equipement %>  |   <strong>Player count:</strong> : <%= @sport.player_count %></p>
+  <hr class="my-4">
+  <p class="lead">
+    <%= link_to 'Edit', edit_sport_path(@sport) , class:"btn btn-secondary"%>   ||
+    <%= link_to 'Back', sports_path , class:"btn btn-dark" %>
+  </p>
+</div>
+
+
