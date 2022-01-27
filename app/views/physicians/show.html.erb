@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @physician.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @physician.age %>
+</p>
+
+<p>
+  <strong>Qaulification:</strong>
+  <%= @physician.qaulification %>
+</p>
+
+<%= link_to 'Edit', edit_physician_path(@physician) %> |
+<%= link_to 'Back', physicians_path %>
