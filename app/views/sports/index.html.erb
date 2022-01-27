@@ -10,12 +10,13 @@
       <th>Sport name</th>
       <th>Sport equipement</th>
       <th>Player count</th>
-      <th>User Id</th>
+      <!-- <th>User Id</th> -->
       <th colspan="1"></th>
     </tr>
   </thead>
 
   <tbody>
+    <!-- called by @sport in controller=>sport_controller=>def index method =>sport.all-->
     <% @sports.each do |sport| %>
     <!-- shows sport added by the current user only   -->
     <% if sport.user == current_user %>
@@ -27,7 +28,7 @@
         </td>
         <td><%= sport.sport_equipement %></td>
         <td><%= sport.player_count %></td>
-        <td><%= sport.user_id %></td>
+        <!-- <td><%= sport.user_id %></td> -->
         <!-- <td><%= link_to 'Show', sport %></td> -->
         <!-- <% if sport.user == current_user%> -->
         <!-- <td><%= link_to 'Edit', edit_sport_path(sport) %></td> -->

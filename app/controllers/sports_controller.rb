@@ -1,10 +1,13 @@
 class SportsController < ApplicationController
+  #CRUD operations dealing with database
   before_action :set_sport, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:index, :show]
   #before running any actions, check correct user
   before_action :correct_user, only:[:edit, :update, :destroy]
   
   # GET /sports or /sports.json
+  #call to db all sports
+  #sports instance to call db
   def index
     @sports = Sport.all
   end
