@@ -1,0 +1,8 @@
+<h1>to check login logout</h1>
+
+<% if current_user %>
+   <h1>hello<%= current_user.email %></h1>
+   <a href="<%= logout_path %>">Log Out</a>
+<% else %>
+<h1>.........</h1>
+<% end %>

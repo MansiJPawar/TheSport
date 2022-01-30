@@ -1,0 +1,28 @@
+<!-- <div class="container">
+
+  <form method="POST" action="<%= login_path %>" >
+    <% token_tag %>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email">
+    <label for password>Password</label>
+    <input type="password" name="password" id="password">
+    <input type="submit" value="login" class="btn btn-info">
+    </form>
+</div> -->
+
+<div style="margin-top: 50px;">
+  <form method="POST" action="<%= login_path %>" class="container" style="width: max-content; padding:40px; height:300px; background:#e9f7ef">
+    <h1>Signin</h1>
+    <% token_tag %>
+    <div class="form-group">
+      <!-- <label for="email">Email</label> -->
+      <input type="email" name="email" id="email" class="form-control" placeholder="email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <!-- <label for password>Password</label> -->
+      <input type="password" name="password" id="password"  class="form-control" placeholder="Password">
+    </div>
+    <input type="submit" value="login" class="btn btn-info">
+  </form>
+</div>
