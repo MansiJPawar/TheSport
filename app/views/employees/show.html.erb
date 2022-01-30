@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<div class="jumbotron container h-100" style="width: fit-content;" >
+  <h1 class="display-6">Employee Details</h1>
+  <h1 class="lead"> 
+    <%= @employee.first_name %>
+    <%= @employee.last_name %>  ||  <%= @employee.email %>  || <%=  @employee.birth_date %>
+  </h1>
+  <hr class="my-4">
+  <p class="card-text"><%= render partial: "notes/form", locals: {notable: @employee} %></p>
+  <p class="lead">
+    <%= link_to 'Edit', edit_employee_path(@employee) , class:"btn btn-outline-dark" %> |
+    <%= link_to 'Back', employees_path , class:"btn btn-outline-info" %>
+  </p>
+</div>
+
+<!-- <%= render partial: "notes/notes", locals: {notable: @employee} %> -->
