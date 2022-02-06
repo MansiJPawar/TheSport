@@ -68,3 +68,7 @@ gem "jquery-datatables", "~> 1.10"
 gem "faker", "~> 2.19"
 
 gem "bootstrap", "~> 4.1"
+
+gem 'bootstrap-datepicker-rails'
+
+gem "select2-rails"
