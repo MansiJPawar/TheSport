@@ -5,7 +5,7 @@ $(document).ready(function() {
     $('.datepicker').datepicker();
 });
 $(function() {
-    var $registrationform = $("#myform");
+    var $registrationform = $("#jsform");
     if ($registrationform.length) {
         $registrationform.validate({
             rules: {

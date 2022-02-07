@@ -3,9 +3,9 @@ body {
     background-color: white;
 }
 
-.container {
-    padding: 50px;
-    background-color: #fab3bf;
+.jumbotron{
+    margin-left: 450px;
+    margin-top: 40px;
 }
 
 input[type=text],
